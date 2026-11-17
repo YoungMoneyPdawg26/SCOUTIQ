@@ -1,0 +1,28 @@
+# Playing-style profiles used by the Recruitment-Fit Score.
+# Each style lists the metrics that define it; the style-match score is the
+# player's average percentile (within his position) across those metrics.
+ST:
+  poacher:            [npxg, goals, shots]
+  target_man:         [aerials_won, aerial_win_pct, npxg, shots]
+  creative_forward:   [xa, key_passes, dribbles_completed, progressive_passes]
+  pressing_forward:   [pressures, recoveries, tackles, npxg]
+W:
+  inside_forward:     [npxg, shots, dribbles_completed]
+  creative_winger:    [xa, key_passes, dribbles_completed, progressive_passes]
+  hard_working_winger: [pressures, tackles, recoveries, xa]
+CM:
+  deep_playmaker:     [progressive_passes, pass_completion_pct, key_passes]
+  box_to_box:         [progressive_passes, tackles, recoveries, npxg]
+  attacking_midfielder: [xa, key_passes, npxg, dribbles_completed]
+DM:
+  ball_winner:        [tackles, interceptions, recoveries, pressures, ground_duels_won]
+  deep_playmaker:     [progressive_passes, pass_completion_pct, interceptions]
+CB:
+  ball_playing:       [progressive_passes, pass_completion_pct, interceptions]
+  stopper:            [aerials_won, aerial_win_pct, clearances, blocks, tackles]
+FB:
+  attacking_fullback: [xa, key_passes, progressive_passes, dribbles_completed]
+  defensive_fullback: [tackles, interceptions, ground_duels_won, aerial_win_pct]
+GK:
+  shot_stopper:       [goals_prevented, save_pct]
+  sweeper_keeper:     [sweeper_actions, gk_long_pass_pct, pass_completion_pct]

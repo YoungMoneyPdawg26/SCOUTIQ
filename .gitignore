@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+
+# Secrets and personal settings: never upload
+config/database.yaml
+.env
+.vscode/
+
+# Data (large, and StatsBomb data should not be re-hosted; rebuild with the commands in README)
+data/
+
+# macOS
+.DS_Store

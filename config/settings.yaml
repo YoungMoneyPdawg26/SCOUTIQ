@@ -1,0 +1,25 @@
+# ScoutIQ settings — edit here, not in the code.
+season_id: 27
+season_label: "2015/2016"
+
+# StatsBomb competition IDs for 2015/16 (confirmed with sb.competitions())
+competitions:
+  premier_league: 2
+  la_liga: 11
+  bundesliga: 9
+  serie_a: 12
+  ligue_1: 7
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+
+
+# Leagues used for scoring and ranking. Bundesliga is excluded because
+# StatsBomb's open data only contains Bayer Leverkusen's 34 matches for 2015/16.
+scoring_leagues:
+  - premier_league
+  - la_liga
+  - serie_a
+  - ligue_1

@@ -1,0 +1,17 @@
+# Example club recruitment brief (the Streamlit app will build these from a form).
+club_name: Example FC
+position: CB                      # GK, CB, FB, DM, CM, W, ST
+style: ball_playing               # a style from config/style_profiles.yaml
+age_min: 20
+age_max: 28
+ideal_age: [22, 26]               # full age score inside this range
+budget_max_eur: 15000000
+attribute_targets:                # metric: minimum percentile within the position
+  progressive_passes: 60
+  aerial_win_pct: 50
+  pass_completion_pct: 60
+importance:                       # how much each part of the fit matters (any numbers; rescaled to 100%)
+  style: 40
+  attributes: 30
+  age: 15
+  value: 15

@@ -1,0 +1,26 @@
+# ScoutIQ Performance Score model — version v0 (initial proposal, open to revision)
+# Weights are percentages per position and must add up to 100.
+model_version: v0
+min_minutes: 900          # players below this are not scored (too small a sample)
+
+# Which metrics make up each category. Within a category every metric counts equally.
+categories:
+  finishing:     [npxg, goals, shots]
+  creation:      [xa, key_passes, assists]
+  progression:   [progressive_passes, dribbles_completed]
+  defending:     [tackles, interceptions, recoveries, ground_duels_won, blocks, clearances, pressures]
+  aerial:        [aerials_won, aerial_win_pct]
+  retention:     [pass_completion_pct, turnovers]
+  shot_stopping: [goals_prevented, save_pct]
+  command:       [claims, sweeper_actions]
+  distribution:  [gk_long_pass_pct, pass_completion_pct]
+
+# Category weights per position group
+position_weights:
+  ST: {finishing: 40, creation: 20, progression: 10, defending: 10, aerial: 10, retention: 10}
+  W:  {finishing: 20, creation: 30, progression: 25, defending: 10, retention: 15}
+  CM: {finishing: 10, creation: 25, progression: 30, defending: 20, aerial: 5, retention: 10}
+  DM: {creation: 10, progression: 25, defending: 40, aerial: 10, retention: 15}
+  CB: {progression: 20, defending: 45, aerial: 25, retention: 10}
+  FB: {finishing: 5, creation: 20, progression: 25, defending: 35, aerial: 5, retention: 10}
+  GK: {shot_stopping: 60, command: 20, distribution: 20}
